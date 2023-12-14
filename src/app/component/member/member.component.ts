@@ -3,13 +3,14 @@ import { Product, TopSelling, TableRows, Employee } from './table-data';
 import { NgFor } from '@angular/common';
 
 
+
 @Component({
-  selector: 'app-table',
+  selector: 'app-member',
   standalone: true,
   imports:[NgFor],
-  templateUrl: 'table.component.html'
+  templateUrl: 'member.component.html'
 })
-export class TableComponent {
+export class MemberComponent {
   topSelling: Product[];
 
   trow: TableRows[];
@@ -17,7 +18,17 @@ export class TableComponent {
   constructor() {
 
     this.topSelling = TopSelling;
-
     this.trow = Employee;
+  }
+
+  ngOnInit() {
+    setTimeout(()=>{   
+      $('#membertables').DataTable({
+       pagingType: 'full_numbers',
+       pageLength: 5,
+       processing: true,
+       lengthMenu : [5, 10, 25],
+      });
+   }, 1);
   }
 }

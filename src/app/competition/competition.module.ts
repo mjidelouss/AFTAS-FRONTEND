@@ -3,18 +3,18 @@ import { CommonModule } from "@angular/common";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { Routes, RouterModule } from "@angular/router";
 import { NgApexchartsModule } from "ng-apexcharts";
-import { DashboardComponent } from "./dashboard.component";
-import { BlogCardsComponent } from "./dashboard-components/blog-cards/blog-cards.component";
+import { DataTablesModule } from 'angular-datatables';
+import { CompetitionComponent } from "./competition.component";
 
 
 const routes: Routes = [
   {
     path: "",
     data: {
-      title: "Dashboard",
-      urls: [{ title: "Dashboard", url: "/dashboard" }, { title: "Dashboard" }],
+      title: "Competition",
+      urls: [{ title: "Competiton", url: "/competition" }, { title: "Competition" }],
     },
-    component: DashboardComponent,
+    component: CompetitionComponent,
   },
 ];
 
@@ -25,10 +25,10 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forChild(routes),
     NgApexchartsModule,
+    DataTablesModule
   ],
   declarations: [
-    DashboardComponent,
-    BlogCardsComponent,
+    CompetitionComponent,
   ],
 })
-export class DashboardModule {}
+export class CompetitionModule {}

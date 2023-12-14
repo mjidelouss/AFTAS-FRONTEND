@@ -4,13 +4,14 @@ import { Router, RouterModule } from "@angular/router";
 import { NgbCollapseModule } from "@ng-bootstrap/ng-bootstrap";
 import { NavigationComponent } from "src/app/shared/header/navigation.component";
 import { SidebarComponent } from "src/app/shared/sidebar/sidebar.component";
+import { DataTablesModule } from 'angular-datatables';
 
 //declare var $: any;
 
 @Component({
   selector: "app-full-layout",
   standalone: true,
-  imports:[RouterModule, SidebarComponent, NavigationComponent, CommonModule, NgbCollapseModule],
+  imports:[RouterModule, SidebarComponent, NavigationComponent, CommonModule, NgbCollapseModule, DataTablesModule],
   templateUrl: "./full.component.html",
   styleUrls: ["./full.component.scss"],
 })

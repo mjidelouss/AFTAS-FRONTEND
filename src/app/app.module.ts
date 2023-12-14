@@ -20,6 +20,7 @@ import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { Approutes } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SpinnerComponent } from './shared/spinner.component';
+import { DataTablesModule } from 'angular-datatables';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { SpinnerComponent } from './shared/spinner.component';
   imports: [
     CommonModule,
     BrowserModule,
+    DataTablesModule,
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,

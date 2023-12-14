@@ -9,9 +9,9 @@ import {
   selector: 'app-dropdown-basic',
   standalone: true,
   imports: [NgbDropdownModule, NgbModule, NgbCollapseModule],
-  templateUrl: './dropdown-collapse.component.html',
+  templateUrl: './fish.component.html',
 })
-export class NgbdDropdownBasicComponent {
+export class FishComponent {
   // This is for the collapse example
   public isCollapsed = false;
   public isCollapsed2 = false;

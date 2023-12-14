@@ -3,33 +3,33 @@ import { RouteInfo } from './sidebar.metadata';
 export const ROUTES: RouteInfo[] = [
  
   {
-    path: '/dashboard',
+    path: '/competition',
     title: 'Competitions',
-    icon: 'bi bi-speedometer2',
+    icon: '🎯',
     class: '',
     extralink: false,
     submenu: []
   },
   {
-    path: '/component/card',
-    title: 'Members',
-    icon: 'bi bi-card-text',
-    class: '',
-    extralink: false,
-    submenu: []
-  },
-  {
-    path: '/component/dropdown',
-    title: 'Fishes',
-    icon: 'bi bi-menu-app',
-    class: '',
-    extralink: false,
-    submenu: []
-  },
-  {
-    path: '/component/table',
+    path: '/component/hunt',
     title: 'Hunts',
-    icon: 'bi bi-layout-split',
+    icon: '🧜🏻‍♂️',
+    class: '',
+    extralink: false,
+    submenu: []
+  },
+  {
+    path: '/component/fish',
+    title: 'Fishes',
+    icon: '🐟',
+    class: '',
+    extralink: false,
+    submenu: []
+  },
+  {
+    path: '/component/member',
+    title: 'Members',
+    icon: '👥',
     class: '',
     extralink: false,
     submenu: []

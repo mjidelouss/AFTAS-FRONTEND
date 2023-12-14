@@ -5,9 +5,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ComponentsRoutes } from './component.routing';
-import { NgbdDropdownBasicComponent } from './dropdown-collapse/dropdown-collapse.component';
-import { CardsComponent } from './card/card.component';
-import { TableComponent } from "./table/table.component";
+import { FishComponent } from './fish/fish.component';
+import { MemberComponent } from "./member/member.component";
+import { HuntComponent } from './hunt/hunt.component';
 
 
 @NgModule({
@@ -17,12 +17,11 @@ import { TableComponent } from "./table/table.component";
     FormsModule,
     ReactiveFormsModule,
     NgbModule,
-    NgbdDropdownBasicComponent,
-    CardsComponent,
-    TableComponent
+    FishComponent,
+    MemberComponent
   ],
   declarations: [
-
+    HuntComponent,
   ],
 })
 export class ComponentsModule { }

@@ -1,7 +1,8 @@
 import { Routes } from '@angular/router';
-import { NgbdDropdownBasicComponent } from './dropdown-collapse/dropdown-collapse.component';
-import { CardsComponent } from './card/card.component';
-import { TableComponent } from './table/table.component';
+import { FishComponent } from './fish/fish.component';
+import { MemberComponent } from './member/member.component';
+import { HuntComponent } from './hunt/hunt.component';
+import { PodiumComponent } from './podium/podium.component';
 
 
 export const ComponentsRoutes: Routes = [
@@ -9,16 +10,20 @@ export const ComponentsRoutes: Routes = [
 		path: '',
 		children: [
 			{
-				path: 'table',
-				component: TableComponent
+				path: 'podium',
+				component: PodiumComponent
 			},
 			{
-				path: 'card',
-				component: CardsComponent
+				path: 'member',
+				component: MemberComponent
 			},
 			{
-				path: 'dropdown',
-				component: NgbdDropdownBasicComponent
+				path: 'hunt',
+				component: HuntComponent
+			},
+			{
+				path: 'fish',
+				component: FishComponent
 			},
 		]
 	}
