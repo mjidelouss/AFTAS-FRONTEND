@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Product, TopSelling, TableRows, Employee } from './table-data';
 import { NgFor } from '@angular/common';
+import { MemberService } from 'src/app/service/member.service';
 
 
 
@@ -11,14 +11,9 @@ import { NgFor } from '@angular/common';
   templateUrl: 'member.component.html'
 })
 export class MemberComponent {
-  topSelling: Product[];
+  members!:any[];
 
-  trow: TableRows[];
-
-  constructor() {
-
-    this.topSelling = TopSelling;
-    this.trow = Employee;
+  constructor(private memberService: MemberService) {
   }
 
   ngOnInit() {
@@ -30,5 +25,17 @@ export class MemberComponent {
        lengthMenu : [5, 10, 25],
       });
    }, 1);
+   this.getMembers()
   }
+
+  getMembers() {
+      this.memberService.getMembers().subscribe(
+        (response) => {
+          this.members = response.data;
+        },
+        (error) => {
+          console.error('Error fetching members:', error);
+        }
+      );
+    }
 }

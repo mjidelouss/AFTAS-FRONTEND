@@ -3,6 +3,7 @@ import { FishComponent } from './fish/fish.component';
 import { MemberComponent } from './member/member.component';
 import { HuntComponent } from './hunt/hunt.component';
 import { PodiumComponent } from './podium/podium.component';
+import { LevelComponent } from './level/level.component';
 
 
 export const ComponentsRoutes: Routes = [
@@ -24,6 +25,10 @@ export const ComponentsRoutes: Routes = [
 			{
 				path: 'fish',
 				component: FishComponent
+			},
+			{
+				path: 'level',
+				component: LevelComponent
 			},
 		]
 	}

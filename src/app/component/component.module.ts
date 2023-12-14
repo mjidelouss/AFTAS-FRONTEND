@@ -8,6 +8,7 @@ import { ComponentsRoutes } from './component.routing';
 import { FishComponent } from './fish/fish.component';
 import { MemberComponent } from "./member/member.component";
 import { HuntComponent } from './hunt/hunt.component';
+import { LevelComponent } from './level/level.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { HuntComponent } from './hunt/hunt.component';
   ],
   declarations: [
     HuntComponent,
+    LevelComponent,
   ],
 })
 export class ComponentsModule { }

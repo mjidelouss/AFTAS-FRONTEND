@@ -21,6 +21,7 @@ import { Approutes } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SpinnerComponent } from './shared/spinner.component';
 import { DataTablesModule } from 'angular-datatables';
+import { MemberService } from './service/member.service';
 
 
 @NgModule({
@@ -43,6 +44,7 @@ import { DataTablesModule } from 'angular-datatables';
     NavigationComponent,
   ],
   providers: [
+    MemberService,
     {
       provide: LocationStrategy,
       useClass: PathLocationStrategy

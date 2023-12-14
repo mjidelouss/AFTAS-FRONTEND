@@ -2,19 +2,19 @@
 <!-- Row -->
 <div class="row">
   <!-- column -->
-  <div class="col-lg-3 col-md-6">
+  <div class="col-lg-3 col-md-6" *ngFor='let fish of fishes'>
     <!-- Card -->
     <!-- --------------------- start Card title ---------------- -->
     <div class="card border border-4 border-secondary">
       <img class="card-img-top img-responsive" src="assets/images/bg/bg-1.jpg" height="250" alt="" />
       <div class="card-body">
-        <h4 class="card-title fw-bold" style="color: hsl(19, 82%, 50%)">Tuna</h4>
+        <h4 class="card-title fw-bold" style="color: hsl(19, 82%, 50%)">{{ fish.name }}</h4>
         <div class="card-text">
           <div class="sidebar-heading fs-6"><i class=""></i>Average Weight:
-            <span class="" style="color: hsl(206, 73%, 53%)">10 KG</span>
+            <span class="" style="color: hsl(206, 73%, 53%)">{{ fish.averageWeight }} KG</span>
           </div>
           <div class="sidebar-heading fs-6"><i class=""></i>Level:
-            <span class="" style="color: hsl(206, 73%, 53%)">5</span>
+            <span class="" style="color: hsl(206, 73%, 53%)">{{ fish.level.level }}</span>
           </div>
         </div>
       </div>

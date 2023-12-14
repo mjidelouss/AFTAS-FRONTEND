@@ -1,0 +1,27 @@
+<div class="d-flex justify-content-between">
+    <h2 class="font-medium mb-3">Levels List</h2>
+    <div class="ms-4"><button class="btn btn-danger opacity-75 fw-bold fs-4 p-2">Add Level</button></div>
+</div>
+<!-- Row -->
+<div class="row">
+  <!-- column -->
+  <div class="col-lg-3 col-md-6" *ngFor='let level of levels'>
+    <!-- Card -->
+    <!-- --------------------- start Card title ---------------- -->
+    <div class="card border border-4 border-secondary">
+      <img class="card-img-top img-responsive" src="assets/images/bg/star.jpeg" height="200" alt="" />
+      <div class="card-body">
+        <h4 class="card-title fw-bold text-dark">Level <span class="text-black ms-1 fw-bold display-6">{{ level.level }}</span></h4>
+        <div class="card-text">
+          <p>{{ level.description }}.</p>
+        </div>
+        <div class="sidebar-heading fs-6"><i class=""></i>Points:
+            <span class="" style="color: hsl(67, 95%, 40%)">{{ level.points }} pts</span>
+          </div>
+      </div>
+    </div>
+    <!-- --------------------- end Card title ---------------- -->
+    <!-- Card -->
+  </div>
+  <!-- column -->
+</div>

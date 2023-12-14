@@ -25,34 +25,26 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor='let  of '>
+                    <tr *ngFor='let Competition of competitions'>
                         <td>
-                            <h5 class="mb-0 fw-normal"></h5>
+                            <h5 class="mb-0 fw-normal">{{ Competition.code }}</h5>
                         </td>
-                        <td class="fs-4"></td>
+                        <td class="fs-4">{{ Competition.date }}</td>
                         <td>
-                            <h5 class="mb-0 fw-normal"></h5>
-                        </td>
-                        
-                        <td>
-                            <h5 class="mb-0 fw-normal"></h5>
+                            <h5 class="mb-0 fw-normal">{{ Competition.startTime }}</h5>
                         </td>
                         <td>
-                            <h5 class="mb-0 fw-normal"></h5>
+                            <h5 class="mb-0 fw-normal">{{ Competition.endTime }}</h5>
                         </td>
                         <td>
-                            <h5 class="mb-0 fw-normal"></h5>
-                        </td>
-                        <td class="fs-4"></td>
-                        <td>
-                            <h5 class="mb-0 fw-normal"></h5>
-                        </td>
-                        
-                        <td>
-                            <h5 class="mb-0 fw-normal"></h5>
+                            <h5 class="mb-0 fw-normal">{{ Competition.location }}</h5>
                         </td>
                         <td>
-                            <h5 class="mb-0 fw-normal"></h5>
+                            <h5 class="mb-0 fw-normal">{{ Competition.totalParticipants }}</h5>
+                        </td>
+                        <td class="fs-4">{{ Competition.amount }}</td>
+                        <td>
+                            <h5 class="mb-0 fw-normal">{{ Competition.status }}</h5>
                         </td>
                         <td>
                             <button type="submit" class="btn btn-danger opacity-75">Delete</button>

@@ -27,6 +27,14 @@ export const ROUTES: RouteInfo[] = [
     submenu: []
   },
   {
+    path: '/component/level',
+    title: 'Levels',
+    icon: '⭐',
+    class: '',
+    extralink: false,
+    submenu: []
+  },
+  {
     path: '/component/member',
     title: 'Members',
     icon: '👥',
