@@ -10,6 +10,7 @@ import { AddCompetitionComponent } from './add-competition/add-competition.compo
 import { EditCompetitionComponent } from './edit-competition/edit-competition.component';
 import { AddMemberComponent } from './add-member/add-member.component';
 import { EditMemberComponent } from './edit-member/edit-member.component';
+import { MemberDetailsComponent } from './member-details/member-details.component';
 
 export const ComponentsRoutes: Routes = [
 	{
@@ -58,7 +59,11 @@ export const ComponentsRoutes: Routes = [
 			{
 				path: 'edit-member',
 				component: EditMemberComponent
-			}
+			},
+			{
+				path: 'member-detail',
+				component: MemberDetailsComponent
+			  }
 		]
 	}
 ];
