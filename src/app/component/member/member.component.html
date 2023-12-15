@@ -7,7 +7,7 @@
               <h4 class="card-title">Members</h4>
               <h5 class="card-subtitle text-muted">Overview of the Members</h5>
           </div>
-          <div class="mt-1"><button class="btn btn-primary" routerLink="/add-member">Add Member</button></div>
+          <div class="mt-1"><button class="btn btn-primary" (click)="goToAddMember()">Add Member</button></div>
       </div>
         <div class="table-responsive">
           <table class="table align-middle text-nowrap" id="membertables">
@@ -44,8 +44,8 @@
                           <h5 class="mb-0 fw-normal">{{ member.identityDocumentType }}</h5>
                       </td>
                       <td class="">
-                        <button type="submit" class="btn btn-info opacity-75"  routerLink="/member-detail">View</button>
-                        <button type="submit" class="btn btn-success ms-1" routerLink="/edit-member">Edit</button>
+                        <button type="submit" class="btn btn-info opacity-75" (click)="goToMemberDetail()">View</button>
+                        <button type="submit" class="btn btn-success ms-1" (click)="goToEditMember()">Edit</button>
                         <button type="submit" class="btn btn-danger ms-1">Delete</button>
                     </td>
                   </tr>              

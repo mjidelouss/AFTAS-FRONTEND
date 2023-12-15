@@ -1,7 +1,7 @@
 <div class="container mt-5">
     <div class="d-flex justify-content-between">
         <h2 class="mb-4">Add Member</h2>
-        <button class="btn mb-1 btn-primary fw-bold" routerLink="/member">BACK</button>
+        <button class="btn mb-1 btn-primary fw-bold" (click)="goBack()">BACK</button>
     </div>
 
     <div class="card border border-4 border-secondary shadow">
@@ -51,7 +51,7 @@
                 <input type="text" class="form-control border border-dark border-2" id="identityDocumentType" name="identityDocumentType" required>
               </div>
             </div>
-              <button class="btn btn-info" type="submit">Save</button>
+              <button class="btn btn-primary" type="submit">Save</button>
             </form>
           </div>
       

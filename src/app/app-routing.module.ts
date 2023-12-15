@@ -10,6 +10,7 @@ import { MemberDetailsComponent } from './component/member-details/member-detail
 import { AddLevelComponent } from './component/add-level/add-level.component';
 import { LevelComponent } from './component/level/level.component';
 import { FishComponent } from './component/fish/fish.component';
+import { MemberComponent } from './component/member/member.component';
 import { AddFishComponent } from './component/add-fish/add-fish.component';
 
 export const Approutes: Routes = [
@@ -30,6 +31,10 @@ export const Approutes: Routes = [
 				path: 'level',
 				component: LevelComponent
 			},
+      {
+        path: 'member',
+        component: MemberComponent
+      },
       {
 				path: 'fish',
 				component: FishComponent

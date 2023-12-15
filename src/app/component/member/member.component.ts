@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NgFor } from '@angular/common';
+import { Router } from '@angular/router';
 import { MemberService } from 'src/app/service/member.service';
-
 
 
 @Component({
@@ -13,7 +13,20 @@ import { MemberService } from 'src/app/service/member.service';
 export class MemberComponent {
   members!:any[];
 
-  constructor(private memberService: MemberService) {
+  constructor(private memberService: MemberService, private router:Router) {
+
+  }
+
+  goToAddMember() {
+    this.router.navigate(['/add-member'])
+  }
+
+  goToEditMember() {
+    this.router.navigate(['/edit-member'])
+  }
+
+  goToMemberDetail() {
+    this.router.navigate(['/member-detail'])
   }
 
   ngOnInit() {
