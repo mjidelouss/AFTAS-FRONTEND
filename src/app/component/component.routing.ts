@@ -6,6 +6,7 @@ import { PodiumComponent } from './podium/podium.component';
 import { LevelComponent } from './level/level.component';
 import { RegisterCompetitionComponent } from './register-competition/register-competition.component';
 import { CompetitionDetailComponent } from './competition-detail/competition-detail.component';
+import { AddCompetitionComponent } from './add-competition/add-competition.component';
 
 export const ComponentsRoutes: Routes = [
 	{
@@ -38,6 +39,10 @@ export const ComponentsRoutes: Routes = [
 			{
 				path: 'competition-detail',
 				component: CompetitionDetailComponent
+			},
+			{
+				path: 'add-competition',
+				component: AddCompetitionComponent
 			}
 		]
 	}

@@ -33,6 +33,7 @@ import { MemberService } from './service/member.service';
   imports: [
     CommonModule,
     BrowserModule,
+    MatDialogModule,
     DataTablesModule,
     BrowserAnimationsModule,
     FormsModule,

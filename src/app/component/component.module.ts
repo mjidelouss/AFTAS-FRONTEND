@@ -11,6 +11,7 @@ import { HuntComponent } from './hunt/hunt.component';
 import { LevelComponent } from './level/level.component';
 import { RegisterCompetitionComponent } from './register-competition/register-competition.component';
 import { CompetitionDetailComponent } from './competition-detail/competition-detail.component';
+import { AddCompetitionComponent } from './add-competition/add-competition.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { CompetitionDetailComponent } from './competition-detail/competition-det
     LevelComponent,
     RegisterCompetitionComponent,
     CompetitionDetailComponent,
+    AddCompetitionComponent,
   ],
 })
 export class ComponentsModule { }
