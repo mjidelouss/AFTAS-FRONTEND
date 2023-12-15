@@ -8,6 +8,8 @@ import { RegisterCompetitionComponent } from './register-competition/register-co
 import { CompetitionDetailComponent } from './competition-detail/competition-detail.component';
 import { AddCompetitionComponent } from './add-competition/add-competition.component';
 import { EditCompetitionComponent } from './edit-competition/edit-competition.component';
+import { AddMemberComponent } from './add-member/add-member.component';
+import { EditMemberComponent } from './edit-member/edit-member.component';
 
 export const ComponentsRoutes: Routes = [
 	{
@@ -48,6 +50,14 @@ export const ComponentsRoutes: Routes = [
 			{
 				path: 'edit-competition',
 				component: EditCompetitionComponent
+			},
+			{
+				path: 'add-member',
+				component: AddMemberComponent
+			},
+			{
+				path: 'edit-member',
+				component: EditMemberComponent
 			}
 		]
 	}

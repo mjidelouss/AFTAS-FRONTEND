@@ -4,6 +4,8 @@ import { FullComponent } from './layouts/full/full.component';
 import { CompetitionDetailComponent } from './component/competition-detail/competition-detail.component';
 import { AddCompetitionComponent } from './component/add-competition/add-competition.component';
 import { EditCompetitionComponent } from './component/edit-competition/edit-competition.component';
+import { AddMemberComponent } from './component/add-member/add-member.component';
+import { EditMemberComponent } from './component/edit-member/edit-member.component';
 
 export const Approutes: Routes = [
   {
@@ -30,7 +32,15 @@ export const Approutes: Routes = [
       {
 				path: 'edit-competition',
 				component: EditCompetitionComponent
-			}
+			},
+      {
+        path: 'add-member',
+        component: AddMemberComponent
+      },
+      {
+        path: 'edit-member',
+        component: EditMemberComponent
+      }
     ]
   },
   {
