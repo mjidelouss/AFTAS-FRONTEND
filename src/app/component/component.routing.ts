@@ -11,6 +11,7 @@ import { EditCompetitionComponent } from './edit-competition/edit-competition.co
 import { AddMemberComponent } from './add-member/add-member.component';
 import { EditMemberComponent } from './edit-member/edit-member.component';
 import { MemberDetailsComponent } from './member-details/member-details.component';
+import { AddLevelComponent } from './add-level/add-level.component';
 
 export const ComponentsRoutes: Routes = [
 	{
@@ -63,7 +64,11 @@ export const ComponentsRoutes: Routes = [
 			{
 				path: 'member-detail',
 				component: MemberDetailsComponent
-			  }
+			},
+			{
+				path: 'add-level',
+				component: AddLevelComponent
+			}
 		]
 	}
 ];

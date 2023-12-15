@@ -7,6 +7,8 @@ import { EditCompetitionComponent } from './component/edit-competition/edit-comp
 import { AddMemberComponent } from './component/add-member/add-member.component';
 import { EditMemberComponent } from './component/edit-member/edit-member.component';
 import { MemberDetailsComponent } from './component/member-details/member-details.component';
+import { AddLevelComponent } from './component/add-level/add-level.component';
+import { LevelComponent } from './component/level/level.component';
 
 export const Approutes: Routes = [
   {
@@ -22,6 +24,10 @@ export const Approutes: Routes = [
         path: 'component',
         loadChildren: () => import('./component/component.module').then(m => m.ComponentsModule)
       },
+      {
+				path: 'level',
+				component: LevelComponent
+			},
       {
         path: 'competition-detail',
         component: CompetitionDetailComponent
@@ -45,7 +51,11 @@ export const Approutes: Routes = [
       {
         path: 'member-detail',
         component: MemberDetailsComponent
-      }
+      },
+      {
+				path: 'add-level',
+				component: AddLevelComponent
+			}
     ]
   },
   {

@@ -16,6 +16,7 @@ import { EditCompetitionComponent } from './edit-competition/edit-competition.co
 import { AddMemberComponent } from './add-member/add-member.component';
 import { EditMemberComponent } from './edit-member/edit-member.component';
 import { MemberDetailsComponent } from './member-details/member-details.component';
+import { AddLevelComponent } from './add-level/add-level.component';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import { MemberDetailsComponent } from './member-details/member-details.componen
     AddMemberComponent,
     EditMemberComponent,
     MemberDetailsComponent,
+    AddLevelComponent,
   ],
 })
 export class ComponentsModule { }
