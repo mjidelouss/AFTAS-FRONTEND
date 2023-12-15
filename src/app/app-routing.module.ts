@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { FullComponent } from './layouts/full/full.component';
 import { CompetitionDetailComponent } from './component/competition-detail/competition-detail.component';
 import { AddCompetitionComponent } from './component/add-competition/add-competition.component';
+import { EditCompetitionComponent } from './component/edit-competition/edit-competition.component';
 
 export const Approutes: Routes = [
   {
@@ -25,7 +26,11 @@ export const Approutes: Routes = [
       {
         path: 'add-competition',
         component: AddCompetitionComponent
-      }
+      },
+      {
+				path: 'edit-competition',
+				component: EditCompetitionComponent
+			}
     ]
   },
   {

@@ -12,6 +12,7 @@ import { LevelComponent } from './level/level.component';
 import { RegisterCompetitionComponent } from './register-competition/register-competition.component';
 import { CompetitionDetailComponent } from './competition-detail/competition-detail.component';
 import { AddCompetitionComponent } from './add-competition/add-competition.component';
+import { EditCompetitionComponent } from './edit-competition/edit-competition.component';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { AddCompetitionComponent } from './add-competition/add-competition.compo
     RegisterCompetitionComponent,
     CompetitionDetailComponent,
     AddCompetitionComponent,
+    EditCompetitionComponent,
   ],
 })
 export class ComponentsModule { }
