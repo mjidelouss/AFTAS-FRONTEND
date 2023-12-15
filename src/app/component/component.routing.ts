@@ -12,6 +12,7 @@ import { AddMemberComponent } from './add-member/add-member.component';
 import { EditMemberComponent } from './edit-member/edit-member.component';
 import { MemberDetailsComponent } from './member-details/member-details.component';
 import { AddLevelComponent } from './add-level/add-level.component';
+import { AddFishComponent } from './add-fish/add-fish.component';
 
 export const ComponentsRoutes: Routes = [
 	{
@@ -68,6 +69,10 @@ export const ComponentsRoutes: Routes = [
 			{
 				path: 'add-level',
 				component: AddLevelComponent
+			},
+			{
+				path: 'add-fish',
+				component: AddFishComponent
 			}
 		]
 	}

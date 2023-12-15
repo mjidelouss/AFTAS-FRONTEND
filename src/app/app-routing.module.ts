@@ -9,6 +9,8 @@ import { EditMemberComponent } from './component/edit-member/edit-member.compone
 import { MemberDetailsComponent } from './component/member-details/member-details.component';
 import { AddLevelComponent } from './component/add-level/add-level.component';
 import { LevelComponent } from './component/level/level.component';
+import { FishComponent } from './component/fish/fish.component';
+import { AddFishComponent } from './component/add-fish/add-fish.component';
 
 export const Approutes: Routes = [
   {
@@ -27,6 +29,10 @@ export const Approutes: Routes = [
       {
 				path: 'level',
 				component: LevelComponent
+			},
+      {
+				path: 'fish',
+				component: FishComponent
 			},
       {
         path: 'competition-detail',
@@ -55,7 +61,11 @@ export const Approutes: Routes = [
       {
 				path: 'add-level',
 				component: AddLevelComponent
-			}
+			},
+      {
+        path: 'add-fish',
+        component: AddFishComponent
+      }
     ]
   },
   {

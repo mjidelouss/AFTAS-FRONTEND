@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FishService } from 'src/app/service/fish.service';
 import { NgFor } from '@angular/common';
+import { Route, Router } from '@angular/router';
 import {
   NgbDropdownModule,
   NgbModule,
@@ -36,10 +37,14 @@ export class FishComponent {
     'assets/images/fish/9.jpg',
   ];
 
-  constructor(private fishService:FishService) {}
+  constructor(private fishService:FishService, private router: Router) {}
 
   ngOnInit() {
     this.getFishes();
+  }
+
+  goToAddFish() {
+    this.router.navigate(['/add-fish'])
   }
 
   getFishes() {
