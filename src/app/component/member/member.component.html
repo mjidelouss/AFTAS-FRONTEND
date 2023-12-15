@@ -2,8 +2,13 @@
   <div class="col-12">
     <div class="card">
       <div class="card-body">
-        <h4 class="card-title">Members</h4>
-        <h5 class="card-subtitle text-muted">Overview of the members</h5>
+        <div class="d-flex justify-content-between">
+          <div>
+              <h4 class="card-title">Members</h4>
+              <h5 class="card-subtitle text-muted">Overview of the Members</h5>
+          </div>
+          <div class="mt-1"><button class="btn btn-primary">Add Member</button></div>
+      </div>
         <div class="table-responsive">
           <table class="table align-middle text-nowrap" id="membertables">
               <thead>
@@ -39,7 +44,9 @@
                           <h5 class="mb-0 fw-normal">{{ member.identityDocumentType }}</h5>
                       </td>
                       <td>
-                        <button type="submit" class="btn btn-danger opacity-75">Delete</button>
+                        <button type="submit" class="btn btn-primary opacity-75">View</button>
+                        <button type="submit" class="btn btn-success opacity-75 ms-1">Edit</button>
+                        <button type="submit" class="btn btn-danger opacity-75 ms-1">Delete</button>
                     </td>
                   </tr>              
               </tbody>

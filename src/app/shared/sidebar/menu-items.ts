@@ -42,4 +42,12 @@ export const ROUTES: RouteInfo[] = [
     extralink: false,
     submenu: []
   },
+  {
+    path: '/component/register-competition',
+    title: 'Register',
+    icon: '➕',
+    class: '',
+    extralink: false,
+    submenu: []
+  },
 ];

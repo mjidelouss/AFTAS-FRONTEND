@@ -9,6 +9,8 @@ import { FishComponent } from './fish/fish.component';
 import { MemberComponent } from "./member/member.component";
 import { HuntComponent } from './hunt/hunt.component';
 import { LevelComponent } from './level/level.component';
+import { RegisterCompetitionComponent } from './register-competition/register-competition.component';
+import { CompetitionDetailComponent } from './competition-detail/competition-detail.component';
 
 
 @NgModule({
@@ -24,6 +26,8 @@ import { LevelComponent } from './level/level.component';
   declarations: [
     HuntComponent,
     LevelComponent,
+    RegisterCompetitionComponent,
+    CompetitionDetailComponent,
   ],
 })
 export class ComponentsModule { }

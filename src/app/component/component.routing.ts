@@ -4,7 +4,8 @@ import { MemberComponent } from './member/member.component';
 import { HuntComponent } from './hunt/hunt.component';
 import { PodiumComponent } from './podium/podium.component';
 import { LevelComponent } from './level/level.component';
-
+import { RegisterCompetitionComponent } from './register-competition/register-competition.component';
+import { CompetitionDetailComponent } from './competition-detail/competition-detail.component';
 
 export const ComponentsRoutes: Routes = [
 	{
@@ -30,6 +31,14 @@ export const ComponentsRoutes: Routes = [
 				path: 'level',
 				component: LevelComponent
 			},
+			{
+				path: 'register-competition',
+				component: RegisterCompetitionComponent
+			},
+			{
+				path: 'competition-detail',
+				component: CompetitionDetailComponent
+			}
 		]
 	}
 ];
