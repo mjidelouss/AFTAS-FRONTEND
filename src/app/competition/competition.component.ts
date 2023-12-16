@@ -1,4 +1,5 @@
 import { Component, AfterViewInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CompetitionService } from '../service/competition.service';
 //declare var require: any;
 
@@ -9,7 +10,7 @@ export class CompetitionComponent implements AfterViewInit {
   
   competitions!:any[];
 
-  constructor(private competitionService:CompetitionService) {
+  constructor(private competitionService:CompetitionService, private router:Router) {
     
   }
 
@@ -36,5 +37,9 @@ export class CompetitionComponent implements AfterViewInit {
         console.error('Error fetching Competitions:', error);
       }
     );
+  }
+
+  viewCompetition(competition: any) {
+    this.router.navigate(['/competition-detail'], { state: { competition } });
   }
 }

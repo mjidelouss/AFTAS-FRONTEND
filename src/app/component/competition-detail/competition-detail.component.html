@@ -12,7 +12,7 @@
         <div class="card shadow">
           <div class="card-body">
             <h5 class="card-title fw-bold">Competition Code</h5>
-            <p class="card-text fs-5"><span class="mb-2" style="color: rgb(142, 141, 141);"> Code-123</span></p>
+            <p class="card-text fs-5"><span class="mb-2" style="color: rgb(142, 141, 141);">{{ competition.code }}</span></p>
           </div>
         </div>
       </div>
@@ -22,7 +22,7 @@
         <div class="card shadow">
           <div class="card-body">
             <h5 class="card-title fw-bold">Date</h5>
-            <p class="card-text fs-5"><i class="bi bi-calendar fs-6 me-2 text-primary"></i><span class="mb-2" style="color: rgb(142, 141, 141);"> 2023-01-01</span></p>
+            <p class="card-text fs-5"><i class="bi bi-calendar fs-6 me-2 text-primary"></i><span class="mb-2" style="color: rgb(142, 141, 141);"> {{ competition.date }}</span></p>
           </div>
         </div>
       </div>
@@ -32,7 +32,7 @@
         <div class="card shadow">
           <div class="card-body">
             <h5 class="card-title fw-bold">Start Time</h5>
-            <p class="card-text fs-5"><i class="bi bi-clock fs-6 me-2 text-primary"></i><span class="mb-2" style="color: rgb(142, 141, 141);"> 10:00 AM</span></p>
+            <p class="card-text fs-5"><i class="bi bi-clock fs-6 me-2 text-primary"></i><span class="mb-2" style="color: rgb(142, 141, 141);"> {{ competition.startTime }}</span></p>
           </div>
         </div>
       </div>
@@ -42,7 +42,7 @@
           <div class="card shadow">
             <div class="card-body">
               <h5 class="card-title fw-bold">End Time</h5>
-              <p class="card-text fs-5"><i class="bi bi-clock fs-6 me-2 text-primary"></i><span class="mb-2" style="color: rgb(142, 141, 141);"> 4:00 PM</span></p>
+              <p class="card-text fs-5"><i class="bi bi-clock fs-6 me-2 text-primary"></i><span class="mb-2" style="color: rgb(142, 141, 141);"> {{ competition.endTime }}</span></p>
             </div>
           </div>
         </div>
@@ -52,7 +52,7 @@
           <div class="card shadow">
             <div class="card-body">
               <h5 class="card-title fw-bold">Location</h5>
-              <p class="card-text fs-5"><i class="bi bi-geo-alt fs-6 me-2 text-primary"></i><span class="mb-2" style="color: rgb(142, 141, 141);"> Agadir</span></p>
+              <p class="card-text fs-5"><i class="bi bi-geo-alt fs-6 me-2 text-primary"></i><span class="mb-2" style="color: rgb(142, 141, 141);"> {{ competition.location }}</span></p>
             </div>
           </div>
          </div>
@@ -62,7 +62,7 @@
           <div class="card shadow">
             <div class="card-body">
               <h5 class="card-title fw-bold">Total Participants</h5>
-              <p class="card-text fs-5"><i class="bi bi-person fs-6 me-2 text-primary"></i><span class="mb-2" style="color: rgb(142, 141, 141);"> 100</span></p>
+              <p class="card-text fs-5"><i class="bi bi-person fs-6 me-2 text-primary"></i><span class="mb-2" style="color: rgb(142, 141, 141);"> {{ competition.totalParticipants }}</span></p>
             </div>
           </div>
           </div>
@@ -72,7 +72,7 @@
           <div class="card shadow">
             <div class="card-body">
               <h5 class="card-title fw-bold">Amount</h5>
-              <p class="card-text fs-5"><i class="bi bi-currency-dollar fs-6 me-2 text-primary"></i><span class="mb-2" style="color: rgb(142, 141, 141);">50.00</span></p>
+              <p class="card-text fs-5"><i class="bi bi-currency-dollar fs-6 me-2 text-primary"></i><span class="mb-2" style="color: rgb(142, 141, 141);"> {{ competition.amount }}</span></p>
             </div>
           </div>
           </div>
@@ -82,7 +82,7 @@
           <div class="card shadow">
             <div class="card-body">
               <h5 class="card-title fw-bold">Status</h5>
-              <p class="card-text fs-5"><i class="bi bi-check-circle fs-6 me-2 text-primary"></i><span class="mb-2" style="color: rgb(142, 141, 141);">Active</span></p>
+              <p class="card-text fs-5"><i class="bi bi-check-circle fs-6 me-2 text-primary"></i><span class="mb-2" style="color: rgb(142, 141, 141);">{{ competition.status }}</span></p>
             </div>
           </div>
           </div>
