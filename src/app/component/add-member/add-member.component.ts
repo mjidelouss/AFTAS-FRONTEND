@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { MemberService } from 'src/app/service/member.service';
 
 @Component({
   selector: 'app-add-member',
@@ -7,11 +8,29 @@ import { Router } from '@angular/router';
   styleUrls: ['./add-member.component.scss']
 })
 export class AddMemberComponent {
+  member: any;
+  identityDocumentTypes = ['IDENTITY_CARD', 'PASSPORT', 'DRIVING_LICENSE'];
 
-  constructor(private router:Router) {}
+  constructor(private router: Router, private memberService: MemberService) {
+    const navigation = this.router.getCurrentNavigation();
+    if (navigation?.extras.state) {
+      this.member = navigation?.extras.state['member'];
+    }
+  }
 
   goBack() {
     this.router.navigate(['/member'])
+  }
+
+  addMember(memberData: any) {
+    this.memberService.addMember(memberData).subscribe(
+      (response) => {
+        console.log('Member added successfully', response);
+      },
+      (error) => {
+        console.error('Error adding member', error);
+      }
+    );
   }
 
 }

@@ -7,11 +7,16 @@ import { Observable } from 'rxjs';
 })
 export class MemberService {
   private apiUrl = 'http://127.0.0.1:8080/api/member/all';
+  private addApiUrl = 'http://127.0.0.1:8080/api/member';
 
   constructor(private http: HttpClient) {}
 
   getMembers(): Observable<any> {
     return this.http.get<any>(this.apiUrl);
+  }
+
+  addMember(memberData: any): Observable<any> {
+    return this.http.post(this.addApiUrl, memberData);
   }
 
   updateMember(member: any): Observable<any> {
