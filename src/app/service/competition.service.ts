@@ -14,4 +14,10 @@ export class CompetitionService {
   getCompetitions(): Observable<any> {
     return this.http.get<any>(this.apiUrl);
   }
+
+  updateCompetition(competition: any): Observable<any> {
+    const updateApiUrl = `http://127.0.0.1:8080/api/competition/${competition.id}`;
+    return this.http.put(updateApiUrl, competition);
+  }
+
 }

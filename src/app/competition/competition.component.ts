@@ -42,4 +42,8 @@ export class CompetitionComponent implements AfterViewInit {
   viewCompetition(competition: any) {
     this.router.navigate(['/competition-detail'], { state: { competition } });
   }
+
+  editCompetition(competition: any) {
+    this.router.navigate(['/edit-competition'], { state: { competition } });
+  }
 }
