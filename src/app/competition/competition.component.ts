@@ -46,4 +46,16 @@ export class CompetitionComponent implements AfterViewInit {
   editCompetition(competition: any) {
     this.router.navigate(['/edit-competition'], { state: { competition } });
   }
+
+  deleteCompetition(id: number) {
+    this.competitionService.deleteCompetition(id).subscribe(
+      (response) => {
+        console.log('Competition deleted successfully');
+      },
+      (error) => {
+        console.error('Error deleting competition', error);
+      }
+    );
+  }
+
 }

@@ -20,4 +20,9 @@ export class CompetitionService {
     return this.http.put(updateApiUrl, competition);
   }
 
+  deleteCompetition(id: number): Observable<any> {
+    const url = `http://127.0.0.1:8080/api/competition/${id}`;
+    return this.http.delete(url);
+  }
+
 }
