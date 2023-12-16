@@ -44,9 +44,9 @@
                           <h5 class="mb-0 fw-normal">{{ member.identityDocumentType }}</h5>
                       </td>
                       <td class="">
-                        <button type="submit" class="btn btn-info opacity-75" (click)="goToMemberDetail()">View</button>
-                        <button type="submit" class="btn btn-success ms-1" (click)="goToEditMember()">Edit</button>
-                        <button type="submit" class="btn btn-danger ms-1">Delete</button>
+                        <button type="submit" class="btn btn-info opacity-75" (click)="viewMember(member)">View</button>
+                        <button type="submit" class="btn btn-success ms-1" (click)="editMember(member)">Edit</button>
+                        <button type="submit" class="btn btn-danger ms-1" (click)="deleteMember(member.id)">Delete</button>
                     </td>
                   </tr>              
               </tbody>

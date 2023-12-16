@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-member-details',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./member-details.component.scss']
 })
 export class MemberDetailsComponent {
+  member: any;
 
+  constructor(private router: Router) {
+    const navigation = this.router.getCurrentNavigation();
+    if (navigation?.extras.state) {
+      this.member = navigation?.extras.state['member'];
+    }
+  }
 }

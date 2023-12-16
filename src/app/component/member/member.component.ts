@@ -21,12 +21,23 @@ export class MemberComponent {
     this.router.navigate(['/add-member'])
   }
 
-  goToEditMember() {
-    this.router.navigate(['/edit-member'])
+  viewMember(member: any) {
+    this.router.navigate(['/member-detail'], { state: { member } });
   }
 
-  goToMemberDetail() {
-    this.router.navigate(['/member-detail'])
+  editMember(member: any) {
+    this.router.navigate(['/edit-member'], { state: { member } });
+  }
+
+  deleteMember(id: number) {
+    this.memberService.deleteMember(id).subscribe(
+      (response) => {
+        console.log('Member deleted successfully');
+      },
+      (error) => {
+        console.error('Error deleting Member', error);
+      }
+    );
   }
 
   ngOnInit() {
