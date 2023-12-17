@@ -12,4 +12,10 @@ export class FishService {
   getFishes(): Observable<any> {
     return this.http.get<any>(this.apiUrl);
   }
+
+  addFish(fish: any): Observable<any> {
+    return this.http.post(this.apiUrl, fish);
+  }
+
+
 }
