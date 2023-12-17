@@ -13,4 +13,13 @@ export class LevelService {
   getLevels(): Observable<any> {
     return this.http.get<any>(this.apiUrl);
   }
+
+  addLevel(level: any): Observable<any> {
+    return this.http.post(this.apiUrl, level);
+  }
+
+  deleteLevel(id: number): Observable<any> {
+    const url = `http://127.0.0.1:8080/api/level/${id}`;
+    return this.http.delete(url);
+  }
 }

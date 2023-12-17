@@ -9,27 +9,28 @@
       
           <!-- Your Form -->
           <div class="body mt-2">
-            <form action="" method="post">
+            <form (ngSubmit)="addLevel(levelForm.value)" #levelForm="ngForm" method="post">
               <div class="row">
                 <!-- First Column -->
                 <div class="col-md-6 mb-3">
                   <label for="level" class="form-label">Level:</label>
-                  <input type="number" class="form-control border border-dark border-2" id="level" name="level" required>
+                  <input type="number" class="form-control border border-dark border-2" id="level" name="level" ngModel required>
                 </div>
       
                 <!-- Third Column -->
                 <div class="col-md-6 mb-3">
                   <label for="points" class="form-label">Points:</label>
-                  <input type="number" class="form-control border border-dark border-2" id="points" name="points" required>
+                  <input type="number" class="form-control border border-dark border-2" id="points" name="points" ngModel required>
                 </div>          
 
               <div class="row">
                 <!-- Second Column -->
                 <div class="col-md-6 mb-3">
                     <label for="description" class="form-label">Description:</label>
-                    <textarea type="text" class="form-control border border-dark border-2" id="description" name="description" style="height: 8VW;" required></textarea>
+                    <textarea type="text" class="form-control border border-dark border-2" id="description" name="description" style="height: 8VW;" ngModel required></textarea>
                   </div>
                 </div>
+
     
             </div>
               <button class="btn btn-primary" type="submit">Save</button>

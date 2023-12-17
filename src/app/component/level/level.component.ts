@@ -25,4 +25,15 @@ export class LevelComponent {
         }
       )
     }
+
+    deleteLevel(id: number) {
+      this.levelService.deleteLevel(id).subscribe(
+        (response) => {
+          console.log('Level deleted successfully');
+        },
+        (error) => {
+          console.error('Error deleting Level', error);
+        }
+      );
+    }
 }
