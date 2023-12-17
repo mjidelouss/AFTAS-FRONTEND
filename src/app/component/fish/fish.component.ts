@@ -60,4 +60,16 @@ export class FishComponent {
       }
     )
   }
+
+  deleteFish(id: number) {
+    this.fishService.deleteFish(id).subscribe(
+      (response) => {
+        console.log('Fish deleted successfully');
+      },
+      (error) => {
+        console.error('Error deleting Fish', error);
+      }
+    );
+  }
+
 }

@@ -17,5 +17,9 @@ export class FishService {
     return this.http.post(this.apiUrl, fish);
   }
 
+  deleteFish(id: number): Observable<any> {
+    const url = `http://127.0.0.1:8080/api/fish/${id}`;
+    return this.http.delete(url);
+  }
 
 }
