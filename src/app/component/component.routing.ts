@@ -13,6 +13,7 @@ import { EditMemberComponent } from './edit-member/edit-member.component';
 import { MemberDetailsComponent } from './member-details/member-details.component';
 import { AddLevelComponent } from './add-level/add-level.component';
 import { AddFishComponent } from './add-fish/add-fish.component';
+import { RankComponent } from './rank/rank.component';
 
 export const ComponentsRoutes: Routes = [
 	{
@@ -73,6 +74,10 @@ export const ComponentsRoutes: Routes = [
 			{
 				path: 'add-fish',
 				component: AddFishComponent
+			},
+			{
+				path: 'ranking',
+				component: RankComponent
 			}
 		]
 	}

@@ -12,6 +12,7 @@ import { LevelComponent } from './component/level/level.component';
 import { FishComponent } from './component/fish/fish.component';
 import { MemberComponent } from './component/member/member.component';
 import { AddFishComponent } from './component/add-fish/add-fish.component';
+import { RankComponent } from './component/rank/rank.component';
 
 export const Approutes: Routes = [
   {
@@ -70,7 +71,11 @@ export const Approutes: Routes = [
       {
         path: 'add-fish',
         component: AddFishComponent
-      }
+      },{
+				path: 'ranking',
+				component: RankComponent
+			},
+
     ]
   },
   {

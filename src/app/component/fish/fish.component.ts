@@ -1,25 +1,16 @@
 import { Component } from '@angular/core';
 import { FishService } from 'src/app/service/fish.service';
 import { NgFor } from '@angular/common';
-import { Route, Router } from '@angular/router';
-import {
-  NgbDropdownModule,
-  NgbModule,
-  NgbCollapseModule,
-} from '@ng-bootstrap/ng-bootstrap';
-import { ConstantPool } from '@angular/compiler';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-dropdown-basic',
   standalone: true,
-  imports: [NgbDropdownModule, NgbModule, NgbCollapseModule, NgFor],
+  imports: [NgFor],
   templateUrl: './fish.component.html',
 })
 export class FishComponent {
-  // This is for the collapse example
-  public isCollapsed = false;
-  public isCollapsed2 = false;
-  collapsed = true;
 
   fishes!:any[];
   imagePaths: string[] = [

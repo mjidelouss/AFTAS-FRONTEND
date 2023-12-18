@@ -18,6 +18,7 @@ import { EditMemberComponent } from './edit-member/edit-member.component';
 import { MemberDetailsComponent } from './member-details/member-details.component';
 import { AddLevelComponent } from './add-level/add-level.component';
 import { AddFishComponent } from './add-fish/add-fish.component';
+import { RankComponent } from './rank/rank.component';
 
 
 @NgModule({
@@ -42,6 +43,7 @@ import { AddFishComponent } from './add-fish/add-fish.component';
     MemberDetailsComponent,
     AddLevelComponent,
     AddFishComponent,
+    RankComponent,
   ],
 })
 export class ComponentsModule { }

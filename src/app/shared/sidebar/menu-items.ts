@@ -50,4 +50,12 @@ export const ROUTES: RouteInfo[] = [
     extralink: false,
     submenu: []
   },
+  {
+    path: '/component/podium',
+    title: 'Podium',
+    icon: '🏆',
+    class: '',
+    extralink: false,
+    submenu: []
+  },
 ];
