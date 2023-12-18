@@ -33,8 +33,11 @@ export class MemberComponent {
   }
 
   searchMembers() {
-    this.memberService.searchMembers(this.searchTerm).subscribe((data) => {
-      this.members = data.data;
+    this.memberService.searchMembers(this.searchTerm).subscribe((response) => {
+      this.members = response.data;
+    },
+    (error) => {
+      console.error('Error Searching for Member', error);
     });
   }
 

@@ -9,6 +9,7 @@ import { CompetitionService } from '../service/competition.service';
 export class CompetitionComponent implements AfterViewInit {
   
   competitions!:any[];
+  selectedStatus: string = '';
 
   constructor(private competitionService:CompetitionService, private router:Router) {
     
@@ -17,14 +18,6 @@ export class CompetitionComponent implements AfterViewInit {
   ngAfterViewInit() { }
 
   ngOnInit() {
-    setTimeout(()=>{   
-      $('#competitionsTable').DataTable({
-       pagingType: 'full_numbers',
-       pageLength: 5,
-       processing: true,
-       lengthMenu : [5, 10, 25],
-      });
-   }, 1);
    this.getCompetitions()
   }
 
@@ -35,6 +28,17 @@ export class CompetitionComponent implements AfterViewInit {
       },
       (error) => {
         console.error('Error fetching Competitions:', error);
+      }
+    );
+  }
+
+  getCompetitionsByStatus() {
+    this.competitionService.getCompetitionsByStatus(this.selectedStatus).subscribe(
+      (response) => {
+        this.competitions = response.data;
+      },
+      (error) => {
+        console.error('Error fetching competitions:', error);
       }
     );
   }

@@ -9,6 +9,22 @@
                 </div>
                 <div class="mt-1"><button class="btn btn-primary" routerLink="/add-competition">Add Competition</button></div>
             </div>
+            <div class="container mt-4">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 d-flex">
+                        <div class="input-group">
+                            <select class="form-control" [(ngModel)]="selectedStatus" id="statusFilter">
+                                <option value="OPEN">Open</option>
+                                <option value="CLOSED">Closed</option>
+                                <option value="IN_PROGRESS">In Progress</option>
+                            </select>
+                        </div> 
+                        <div>
+                            <button type="button" (click)="getCompetitionsByStatus()" class="btn btn-primary ms-1">Filter</button>
+                        </div>           
+                        </div>
+                    </div>
+                </div>
           <div class="table-responsive">
             <table class="table align-middle text-nowrap" id="competitionsTable">
                 <thead>
