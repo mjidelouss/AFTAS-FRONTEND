@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { NgFor } from '@angular/common';
 import { Router } from '@angular/router';
 import { MemberService } from 'src/app/service/member.service';
@@ -7,11 +9,12 @@ import { MemberService } from 'src/app/service/member.service';
 @Component({
   selector: 'app-member',
   standalone: true,
-  imports:[NgFor],
+  imports:[NgFor, FormsModule],
   templateUrl: 'member.component.html'
 })
 export class MemberComponent {
   members!:any[];
+  searchTerm: string = '';
 
   constructor(private memberService: MemberService, private router:Router) {
 
@@ -27,6 +30,12 @@ export class MemberComponent {
 
   editMember(member: any) {
     this.router.navigate(['/edit-member'], { state: { member } });
+  }
+
+  searchMembers() {
+    this.memberService.searchMembers(this.searchTerm).subscribe((data) => {
+      this.members = data.data;
+    });
   }
 
   deleteMember(id: number) {
