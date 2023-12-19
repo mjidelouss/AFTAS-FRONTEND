@@ -5,6 +5,7 @@ import { Routes, RouterModule } from "@angular/router";
 import { NgApexchartsModule } from "ng-apexcharts";
 import { DataTablesModule } from 'angular-datatables';
 import { CompetitionComponent } from "./competition.component";
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 
 const routes: Routes = [
@@ -25,7 +26,8 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forChild(routes),
     NgApexchartsModule,
-    DataTablesModule
+    DataTablesModule,
+    MatPaginatorModule
   ],
   declarations: [
     CompetitionComponent,

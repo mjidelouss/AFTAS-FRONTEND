@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { HuntService } from 'src/app/service/hunt.service';
+import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-hunt',
@@ -8,16 +10,26 @@ import { HuntService } from 'src/app/service/hunt.service';
 })
 export class HuntComponent {
 
-  constructor(private huntService: HuntService) {}
+  constructor(private huntService: HuntService, private router:Router) {}
 
   addHunt(hunt: any) {
-    console.log(hunt)
     this.huntService.addHunt(hunt).subscribe(
       (response) => {
-        console.log('Hunt added successfully', response);
+        Swal.fire({
+          icon: 'success',
+          title: 'Hunt Added Successfully',
+          showConfirmButton: false,
+          timer: 1500
+        });
       },
       (error) => {
-        console.error('Error adding Hunt', error);
+        Swal.fire({
+          icon: 'error',
+          title: 'Error Adding Hunt',
+          text: 'An error occurred while adding the hunt. Please try again.',
+          confirmButtonColor: '#d33',
+          confirmButtonText: 'OK'
+        });
       }
     );
   }

@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { NgFor } from '@angular/common';
 import { Router } from '@angular/router';
 import { MemberService } from 'src/app/service/member.service';
+import Swal from 'sweetalert2';
 
 
 @Component({
@@ -42,14 +43,38 @@ export class MemberComponent {
   }
 
   deleteMember(id: number) {
-    this.memberService.deleteMember(id).subscribe(
-      (response) => {
-        console.log('Member deleted successfully');
-      },
-      (error) => {
-        console.error('Error deleting Member', error);
+    Swal.fire({
+      title: 'Are you sure?',
+      text: 'You will not be able to recover this member!',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.memberService.deleteMember(id).subscribe(
+          (response) => {
+            Swal.fire({
+              icon: 'success',
+              title: 'Member Deleted Successfully',
+              showConfirmButton: false,
+              timer: 1500
+            });
+            this.getMembers();
+          },
+          (error) => {
+            Swal.fire({
+              icon: 'error',
+              title: 'Error Deleting Member',
+              text: 'An error occurred while deleting the member. Please try again.',
+              confirmButtonColor: '#d33',
+              confirmButtonText: 'OK'
+            });
+          }
+        );
       }
-    );
+    });
   }
 
   ngOnInit() {

@@ -20,7 +20,7 @@ export class PodiumComponent {
   }
 
   getCompetitions() {
-    this.competitionService.getCompetitions().subscribe(
+    this.competitionService.getSimpleCompetitions().subscribe(
       (response) => {
         this.competitions = response.data.map((competition: any, index: number) => ({
           ...competition,

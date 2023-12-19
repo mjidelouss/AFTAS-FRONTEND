@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -11,8 +11,13 @@ export class CompetitionService {
 
   constructor(private http: HttpClient) {}
 
-  getCompetitions(): Observable<any> {
+  getSimpleCompetitions() {
     return this.http.get<any>(this.apiUrl);
+  }
+
+  getCompetitions(pageIndex: number, pageSize: number): Observable<any> {
+    const params = new HttpParams().set('page', pageIndex.toString()).set('size', pageSize.toString());
+    return this.http.get<any>(this.apiUrl, { params });
   }
 
   getCompetitionsByStatus(status: string): Observable<any> {

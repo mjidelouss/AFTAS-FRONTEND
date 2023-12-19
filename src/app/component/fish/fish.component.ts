@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FishService } from 'src/app/service/fish.service';
 import { NgFor } from '@angular/common';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 
 @Component({
@@ -53,14 +54,38 @@ export class FishComponent {
   }
 
   deleteFish(id: number) {
-    this.fishService.deleteFish(id).subscribe(
-      (response) => {
-        console.log('Fish deleted successfully');
-      },
-      (error) => {
-        console.error('Error deleting Fish', error);
+    Swal.fire({
+      title: 'Are you sure?',
+      text: 'You will not be able to recover this fish!',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.fishService.deleteFish(id).subscribe(
+          (response) => {
+            Swal.fire({
+              icon: 'success',
+              title: 'Fish Deleted Successfully',
+              showConfirmButton: false,
+              timer: 1500
+            });
+            this.getFishes();
+          },
+          (error) => {
+            Swal.fire({
+              icon: 'error',
+              title: 'Error Deleting Fish',
+              text: 'An error occurred while deleting the fish. Please try again.',
+              confirmButtonColor: '#d33',
+              confirmButtonText: 'OK'
+            });
+          }
+        );
       }
-    );
+    });
   }
 
 }

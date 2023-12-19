@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { LevelService } from 'src/app/service/level.service';
 import { NgFor } from '@angular/common';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-level',
@@ -27,13 +28,36 @@ export class LevelComponent {
     }
 
     deleteLevel(id: number) {
-      this.levelService.deleteLevel(id).subscribe(
-        (response) => {
-          console.log('Level deleted successfully');
-        },
-        (error) => {
-          console.error('Error deleting Level', error);
+      Swal.fire({
+        title: 'Are you sure?',
+        text: 'You will not be able to recover this level!',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          this.levelService.deleteLevel(id).subscribe(
+            (response) => {
+              Swal.fire({
+                icon: 'success',
+                title: 'Level Deleted Successfully',
+                showConfirmButton: false,
+                timer: 1500
+              });
+            },
+            (error) => {
+              Swal.fire({
+                icon: 'error',
+                title: 'Error Deleting Level',
+                text: 'An error occurred while deleting the level. Please try again.',
+                confirmButtonColor: '#d33',
+                confirmButtonText: 'OK'
+              });
+            }
+          );
         }
-      );
+      });
     }
 }
