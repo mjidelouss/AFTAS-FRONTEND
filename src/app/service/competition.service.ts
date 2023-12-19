@@ -20,6 +20,10 @@ export class CompetitionService {
     return this.http.get(url);
   }
 
+  addCompetition(competition: any): Observable<any> {
+    return this.http.post(this.apiUrl, competition);
+  }
+
   updateCompetition(competition: any): Observable<any> {
     const updateApiUrl = `http://127.0.0.1:8080/api/competition/${competition.id}`;
     return this.http.put(updateApiUrl, competition);

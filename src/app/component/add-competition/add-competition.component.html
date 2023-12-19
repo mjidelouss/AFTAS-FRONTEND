@@ -9,34 +9,34 @@
       
           <!-- Your Form -->
           <div class="body mt-2">
-            <form action="" method="post">
+            <form (ngSubmit)="addCompetition(competitionForm.value)" #competitionForm="ngForm" method="post">
               <div class="row">
-                <!-- First Column -->
-                <div class="col-md-6 mb-3">
-                  <label for="code" class="form-label">Code:</label>
-                  <input type="text" class="form-control border border-dark border-2" id="code" name="code" required>
-                </div>
+                <!-- Amount -->
+              <div class="col-md-6 mb-3">
+                <label for="amount" class="form-label">Amount:</label>
+                <input type="number" class="form-control border border-dark border-2" id="amount" name="amount" ngModel required>
+              </div>
       
-                <!-- Second Column -->
+                <!-- Date -->
                 <div class="col-md-6 mb-3">
                   <label for="date" class="form-label">Date:</label>
-                  <input type="text" class="form-control border border-dark border-2" id="date" name="date" required>
+                  <input type="date" class="form-control border border-dark border-2" id="date" name="date" ngModel required>
                 </div>
               </div>
 
               <!-- Repeat the same structure for other pairs of inputs -->
 
               <div class="row">
-                <!-- Third Column -->
+                <!-- Start Time -->
                 <div class="col-md-6 mb-3">
                   <label for="startTime" class="form-label">Start Time:</label>
-                  <input type="text" class="form-control border border-dark border-2" id="startTime" name="startTime" required>
+                  <input type="time" class="form-control border border-dark border-2" id="startTime" name="startTime" ngModel required>
                 </div>
       
-                <!-- Fourth Column -->
+                <!-- End Time -->
                 <div class="col-md-6 mb-3">
                   <label for="endTime" class="form-label">End Time:</label>
-                  <input type="text" class="form-control border border-dark border-2" id="endTime" name="endTime" required>
+                  <input type="time" class="form-control border border-dark border-2" id="endTime" name="endTime" ngModel required>
                 </div>
               </div>
 
@@ -44,24 +44,15 @@
              <!-- Total Participants -->
              <div class="col-md-6 mb-3">
                 <label for="totalParticipants" class="form-label">Total Participants:</label>
-                <input type="text" class="form-control border border-dark border-2" id="totalParticipants" name="totalParticipants" required>
+                <input type="number" class="form-control border border-dark border-2" id="totalParticipants" name="totalParticipants" ngModel required>
               </div>
     
               <!-- Location -->
               <div class="col-md-6 mb-3">
                 <label for="location" class="form-label">Location:</label>
-                <input type="text" class="form-control border border-dark border-2" id="location" name="location" required>
+                <input type="text" class="form-control border border-dark border-2" id="location" name="location" ngModel required>
               </div>
             </div>
-
-            <div class="row">
-              <!-- Amount -->
-              <div class="col-md-6 mb-3">
-                <label for="amount" class="form-label">Amount:</label>
-                <input type="text" class="form-control border border-dark border-2" id="amount" name="amount" required>
-              </div>
-            </div>
-
               <button class="btn btn-primary" type="submit">Save</button>
             </form>
           </div>
