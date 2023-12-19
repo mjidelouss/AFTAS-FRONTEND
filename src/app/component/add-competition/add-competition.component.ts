@@ -16,27 +16,19 @@ export class AddCompetitionComponent {
   addCompetition(competition: any) {
     this.competitionService.addCompetition(competition).subscribe(
       (response) => {
-        // Display success message
         Swal.fire({
           icon: 'success',
           title: 'Competition Added',
           text: 'Competition added successfully!',
         });
-  
-        console.log('Competition added successfully', response);
-  
-        // Navigate to the "/competition" route
         this.router.navigate(['/competition']);
       },
       (error) => {
-        // Display error message
         Swal.fire({
           icon: 'error',
           title: 'Error',
           text: 'Failed to add competition. Please try again.',
         });
-  
-        console.error('Error adding Competition', error);
       }
     );
   }

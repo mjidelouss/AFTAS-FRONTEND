@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { CompetitionService } from 'src/app/service/competition.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-edit-competition',
@@ -21,9 +22,22 @@ export class EditCompetitionComponent {
     this.competitionService.updateCompetition(this.competition).subscribe(
       (response) => {
         this.competition = response.data;
+        Swal.fire({
+          icon: 'success',
+          title: 'Competition Updated Successfully',
+          showConfirmButton: false,
+          timer: 1500
+        });
+        this.router.navigate(['/competition']);
       },
       (error) => {
-        console.error('Error updating competition', error);
+        Swal.fire({
+          icon: 'error',
+          title: 'Error Updating Competition',
+          text: 'An error occurred while updating the competition. Please try again.',
+          confirmButtonColor: '#d33',
+          confirmButtonText: 'OK'
+        });
       }
     );
   }

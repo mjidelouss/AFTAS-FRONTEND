@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { MemberService } from 'src/app/service/member.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-add-member',
@@ -25,10 +26,19 @@ export class AddMemberComponent {
   addMember(memberData: any) {
     this.memberService.addMember(memberData).subscribe(
       (response) => {
-        console.log('Member added successfully', response);
+        Swal.fire({
+          icon: 'success',
+          title: 'Member Added',
+          text: 'Member added successfully!',
+        });
+        this.router.navigate(['/member']);
       },
       (error) => {
-        console.error('Error adding member', error);
+        Swal.fire({
+          icon: 'error',
+          title: 'Error',
+          text: 'Failed to add Member. Please try again.',
+        });
       }
     );
   }
